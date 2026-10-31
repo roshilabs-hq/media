@@ -1,0 +1,43 @@
+# משימה 57 (31.10.2026): הסביבה בענן של ההפקה חוסמת את supabase.co, אז הקריינות עוברת דרך כאן.
+# ההפקה דוחפת auto/news/<id>/tts.json = {"01": מספר הזמנה ב-production.tts, ...}; כאן מורידים כל הקלטה
+# מפונקציית tts (GET ?id=) ל-auto/news/<id>/voice/01.wav, ודוחפים. ההפקה מושכת את הריפו ומרנדרת.
+name: tts-fetch
+on:
+  push:
+    paths: ['auto/news/**/tts.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: tts-fetch
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: הורדת הקלטות
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, time, urllib.error, urllib.request
+          U = "https://ftfaporbookulrspamjn.supabase.co/functions/v1/tts?id="
+          for f in glob.glob("auto/news/*/tts.json"):
+              out = os.path.join(os.path.dirname(f), "voice"); os.makedirs(out, exist_ok=True)
+              for name, jid in json.load(open(f)).items():
+                  dst = os.path.join(out, f"{name}.wav")
+                  if os.path.exists(dst):
+                      continue
+                  for _ in range(40):  # עד 10 דקות להקלטה שעוד לא מוכנה
+                      try:
+                          open(dst, "wb").write(urllib.request.urlopen(U + str(int(jid)), timeout=30).read()); break
+                      except urllib.error.HTTPError as e:
+                          body = e.read().decode(errors="ignore")
+                          if e.code != 409 or body == "failed":
+                              raise SystemExit(f"{f} {name}: {e.code} {body}")
+                          time.sleep(15)
+                  else:
+                      raise SystemExit(f"{f} {name}: not ready after 10 minutes")
+                  print("ok", dst)
+          PY
+          git config user.name "tts-fetch"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add auto/news
+          git diff --cached --quiet || { git commit -m "tts-fetch: הקלטות"; git push; }
