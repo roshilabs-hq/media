@@ -9,12 +9,12 @@ GAP, T0 = 0.3, 0.4
 
 # (תוכן הסצנה, רקע) — אותם משפטים ואייקונים כמו בתצוגה שרועי אישר
 SC = [
-    ('<h2 class="t"><span class="w">מה</span> <span class="w">זה</span> <span class="w">בעצם</span><br><span class="w hl">סקיל?</span></h2><img class="ic" src="assets/sparkles_3d.png"><div class="pill">בלי מילים גבוהות.</div>', 'light'),
+    ('<div class="ep">חוזרים לבסיס · פרק 1/40</div><h2 class="t"><span class="w">מה</span> <span class="w">זה</span> <span class="w">בעצם</span><br><span class="w hl">סקיל?</span></h2><img class="ic" src="assets/sparkles_3d.png"><div class="pill">בלי מילים גבוהות.</div>', 'light'),
     ('<h2 class="t"><span class="w">בצ\'אט</span> <span class="w">אתם</span> <span class="w">מסבירים</span><br><span class="w hl">כל</span> <span class="w hl">פעם</span> <span class="w hl">מחדש.</span></h2><img class="ic" src="assets/speech_balloon_3d.png"><div class="pill">הסגנון. המחירים. הכללים.</div>', 'light'),
     ('<h2 class="t"><span class="w hl">סקיל</span><br><span class="w">זה</span> <span class="w">דף</span> <span class="w">הוראות.</span></h2><img class="ic" src="assets/memo_3d.png"><div class="pill">כותבים פעם אחת.</div>', 'light'),
     ('<h2 class="t"><span class="w">וה-AI</span> <span class="w">שולף</span> <span class="w">אותו</span><br><span class="w hl">לבד,</span> <span class="w">כשצריך.</span></h2><div class="stack"><img src="assets/memo_3d.png"><img id="m1" src="assets/memo_3d.png"><img id="m2" src="assets/memo_3d.png"><div class="meter"><i id="mt"></i><b>זמן שחסכתם</b></div></div><div class="pill">כל פעם.</div>', 'light'),
     ('<h2 class="t"><span class="w">למשל:</span> <span class="w">סקיל</span> <span class="w">של</span><br><span class="w hl">הצעת</span> <span class="w hl">מחיר.</span></h2><div class="bubble">"הצעה לדני, 3 חדרים"<small>וזה יוצא בסגנון ובמחירים שלכם</small></div><div class="pill">משפט אחד.</div>', 'light'),
-    ('<h2 class="t"><span class="w">ואם</span> <span class="w">הוא</span> <span class="w">גם</span><br><span class="w hl">שולח</span> <span class="w hl">אותה</span> <span class="w">לבד?</span></h2><img class="ic" src="assets/robot_3d.png"><div class="pill">זה כבר סוכן. בסרטון הבא.</div>', 'dark'),
+    ('<h2 class="t"><span class="w">ואם</span> <span class="w">הוא</span> <span class="w">גם</span><br><span class="w hl">שולח</span> <span class="w hl">אותה</span> <span class="w">לבד?</span></h2><img class="ic" src="assets/robot_3d.png"><div class="pill">זה כבר סוכן. פרק 2.</div>', 'dark'),
     ('<h2 class="t"><span class="w">חוזרים</span> <span class="w">לבסיס.</span><br><span class="w hl">תעקבו.</span></h2><img class="ic" src="assets/sparkles_3d.png"><div class="sign">רושינוביץ</div>', 'light'),
 ]
 
@@ -40,6 +40,7 @@ body{width:1080px;height:1920px;overflow:hidden;background:#efece4}
 .meter b{position:absolute;bottom:-64px;left:50%;transform:translateX(-50%);font-size:37px;font-weight:500;white-space:nowrap;color:#63635b}
 .bubble{margin-top:auto;background:#fff;border-radius:54px 54px 11px 54px;padding:43px 54px;font-weight:800;font-size:65px;box-shadow:0 26px 54px rgba(26,26,24,.14);text-align:center}
 .bubble small{display:block;font-weight:500;font-size:45px;color:#63635b;margin-top:16px}
+.ep{position:absolute;top:150px;left:0;right:0;margin:auto;width:max-content;background:#c2261a;color:#fff;font-weight:800;font-size:44px;padding:10px 32px;border-radius:40px}
 .sign{font-weight:800;font-size:50px;color:#63635b;letter-spacing:.04em;margin-bottom:auto}'''
 
 
