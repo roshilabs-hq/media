@@ -1,0 +1,71 @@
+# משימה 153 (3.11.2026): בסביבת ההפקה בענן אין Whisper (pip נתקע, הורדת המודל נקטעת), אז ההקשבה רצה כאן.
+# כל mp4 שנדחף תחת auto/ מתומלל (Whisper medium, עברית), והתמלול נשמר לידו: <קובץ>.heard.json עם ה-SHA של הקובץ.
+# precheck.py קורא את הקובץ הזה במקום להריץ Whisper, ורק אם ה-SHA תואם. ההפקה מושכת את הריפו ומריצה precheck על העותק כאן.
+name: listen
+on:
+  push:
+    paths: ['auto/**/*.mp4']
+  workflow_dispatch:
+    inputs:
+      files:
+        description: 'נתיבים לתמלול, מופרדים ברווח'
+        required: false
+permissions:
+  contents: write
+concurrency: listen
+jobs:
+  listen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: אילו סרטונים חדשים
+        id: files
+        run: |
+          if [ -n "${{ inputs.files }}" ]; then echo "${{ inputs.files }}" | xargs -n1 > /tmp/new.txt; else
+            before="${{ github.event.before }}"
+            if [ -z "$before" ] || ! git cat-file -e "$before" 2>/dev/null; then before=HEAD~1; fi
+            git diff --name-only --diff-filter=AM "$before" HEAD -- ':(glob)auto/**/*.mp4' > /tmp/new.txt || true
+          fi
+          cat /tmp/new.txt
+          [ -s /tmp/new.txt ] && echo "any=1" >> "$GITHUB_OUTPUT" || true
+      - uses: actions/cache@v4
+        if: steps.files.outputs.any == '1'
+        with:
+          path: ~/.cache/whisper
+          key: whisper-medium-v1
+      - name: התקנה
+        if: steps.files.outputs.any == '1'
+        run: |
+          sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
+          pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -q openai-whisper
+      - name: תמלול
+        if: steps.files.outputs.any == '1'
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, whisper
+          m = None
+          for v in open("/tmp/new.txt").read().split():
+              if not os.path.exists(v):
+                  continue
+              out = v + ".heard.json"
+              sha = hashlib.sha256(open(v, "rb").read()).hexdigest()
+              if os.path.exists(out) and json.load(open(out, encoding="utf-8")).get("sha256") == sha:
+                  continue
+              m = m or whisper.load_model("medium")
+              r = m.transcribe(v, language="he")
+              json.dump({"sha256": sha, "model": "medium", "segments": [[round(s["start"], 2), s["text"]] for s in r["segments"]]},
+                        open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+              print("ok", out)
+          PY
+      - name: שמירה
+        if: steps.files.outputs.any == '1'
+        run: |
+          git config user.name "listen"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- ':(glob)auto/**/*.heard.json'
+          git diff --cached --quiet && exit 0
+          git commit -m "listen: תמלול"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
