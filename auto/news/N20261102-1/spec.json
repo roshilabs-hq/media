@@ -1,16 +1,108 @@
 {
  "id": "N20261102-1",
- "opener": {"word": "הקובץ?", "bg": "blue", "block": "yellow"},
- "keywords": ["בחינם", "הסתייגות:"],
- "sentences": [
-  {"text": "קובץ שלא נפתח? ממירים אותו בחינם.", "scene": {"kind": "hook", "title": "קובץ שלא נפתח?", "hand": "ממירים בחינם", "color": "green"}},
-  {"text": "יש ממיר חינמי שנקרא Filee.", "scene": {"kind": "window", "chip": "Filee", "title": "ממיר חינמי.", "hand": "Filee.", "image": "page-home-en.png", "bar": "Filee", "real": "מסך אמיתי · מתוך GitHub · 1.11", "color": "blue", "ghost": "Filee", "width": 940, "top": 600}},
-  {"text": "גוררים את הקובץ, ומפילים על הפורמט שרוצים.", "scene": {"kind": "big", "chip": "גוררים", "title": "גוררים. מפילים.", "hand": "על הפורמט שרוצים", "color": "orange"}},
-  {"text": "למשל Word ל-PDF לפני ששולחים הצעת מחיר. וגם Excel, PowerPoint, תמונות, וידאו. יותר מ-260 סוגי קבצים.", "scene": {"kind": "window", "chip": "260 סוגים", "title": "יותר מ-260 סוגי קבצים.", "hand": "וידאו תמונות ועוד.", "image": "page-presets-en.png", "bar": "Filee", "real": "מסך אמיתי · מתוך GitHub · 1.11", "color": "purple", "ghost": "260", "width": 940, "top": 600}},
-  {"text": "ההמרה קורית על המחשב, והקבצים לא עולים לשום שרת.", "scene": {"kind": "big", "chip": "על המחשב", "title": "על המחשב.", "hand": "הקבצים לא עולים לשרת", "color": "sky"}},
-  {"text": "הסתייגות: במק זו עדיין גרסת תצוגה מקדימה.", "scene": {"kind": "big", "chip": "הסתייגות", "title": "הסתייגות.", "hand": "במק זו עדיין תצוגה מקדימה", "color": "red"}},
-  {"text": "כמעט 20 אלף כוכבים ב-GitHub, וקוד פתוח.", "scene": {"kind": "big", "kick": "נבדק 1.11", "title": "כמעט 20 אלף כוכבים.", "hand": "ב-GitHub, קוד פתוח", "color": "yellow"}},
-  {"text": "ואם יש משהו שחוזר אצלכם כל שבוע, אפשר לבנות לו כלי. תכתבו הֲמָרָה בתגובות.", "scene": {"kind": "brand", "hand": "תכתבו \"המרה\" בתגובות", "follow": true, "color": "blue"}}
+ "opener": {
+  "word": "הקובץ?",
+  "bg": "blue",
+  "block": "yellow"
+ },
+ "keywords": [
+  "בחינם",
+  "הסתייגות:"
  ],
- "cover": {"color": "green", "line": "הקובץ לא נפתח?"}
+ "sentences": [
+  {
+   "text": "קובץ שלא נפתח? ממירים אותו בחינם.",
+   "scene": {
+    "kind": "hook",
+    "title": "קובץ שלא נפתח?",
+    "hand": "ממירים בחינם",
+    "color": "green"
+   }
+  },
+  {
+   "text": "יש ממיר חינמי שנקרא Filee.",
+   "scene": {
+    "kind": "window",
+    "chip": "Filee",
+    "title": "ממיר חינמי.",
+    "hand": "Filee.",
+    "image": "page-home-en.png",
+    "bar": "Filee",
+    "real": "מסך אמיתי · מתוך GitHub · 1.11",
+    "color": "blue",
+    "ghost": "Filee",
+    "width": 940,
+    "top": 600
+   }
+  },
+  {
+   "text": "גוררים את הקובץ, ומפילים על הפורמט שרוצים.",
+   "scene": {
+    "kind": "big",
+    "chip": "גוררים",
+    "title": "גוררים. מפילים.",
+    "hand": "על הפורמט שרוצים",
+    "color": "orange"
+   }
+  },
+  {
+   "text": "למשל Word ל-PDF לפני ששולחים הצעת מחיר. וגם Excel, PowerPoint, תמונות, וידאו. יותר מ-260 סוגי קבצים.",
+   "scene": {
+    "kind": "window",
+    "chip": "260 סוגים",
+    "title": "יותר מ-260 סוגי קבצים.",
+    "hand": "וידאו תמונות ועוד.",
+    "image": "page-presets-en.png",
+    "bar": "Filee",
+    "real": "מסך אמיתי · מתוך GitHub · 1.11",
+    "color": "purple",
+    "ghost": "260",
+    "width": 940,
+    "top": 600
+   }
+  },
+  {
+   "text": "ההמרה קורת על המחשב, והקבצים לא עולים לשום שרת.",
+   "scene": {
+    "kind": "big",
+    "chip": "על המחשב",
+    "title": "על המחשב.",
+    "hand": "הקבצים לא עולים לשרת",
+    "color": "sky"
+   }
+  },
+  {
+   "text": "הִסְתַּיְּגוּת: בְּמַק זוֹ עֲדַיִן גִּרְסָה מוּקְדֶּמֶת.",
+   "scene": {
+    "kind": "big",
+    "chip": "הסתייגות",
+    "title": "הסתייגות.",
+    "hand": "במק זו עדיין גרסה מוקדמת",
+    "color": "red"
+   }
+  },
+  {
+   "text": "כמעט 20 אלף כוכבים ב-GitHub, וקוד פתוח.",
+   "scene": {
+    "kind": "big",
+    "kick": "נבדק 1.11",
+    "title": "כמעט 20 אלף כוכבים.",
+    "hand": "ב-GitHub, קוד פתוח",
+    "color": "yellow"
+   }
+  },
+  {
+   "text": "ואם יש משהו שחוזר אצלכם כל שבוע, אפשר לבנות לו כלי. תכתבו הֲמָרָה בתגובות.",
+   "scene": {
+    "kind": "brand",
+    "hand": "תכתבו \"המרה\" בתגובות",
+    "follow": true,
+    "color": "blue"
+   }
+  }
+ ],
+ "cover": {
+  "color": "green",
+  "line": "הקובץ לא נפתח?"
+ }
 }
