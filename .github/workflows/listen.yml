@@ -64,7 +64,7 @@ jobs:
               m = m or whisper.load_model("medium")
               r = m.transcribe(v, language="he")
               he = he or WhisperModel("ivrit-ai/whisper-large-v3-turbo-ct2", device="cpu", compute_type="int8")
-              hs, _ = he.transcribe(v, language="he")
+              hs, _ = he.transcribe(whisper.load_audio(v), language="he")  # אודיו מוכן: ה-av של faster-whisper לא תואם (4.11)
               json.dump({"sha256": sha, "model": "medium", "segments": [[round(s["start"], 2), s["text"]] for s in r["segments"]],
                          "model_he": "ivrit-ai/whisper-large-v3-turbo-ct2", "segments_he": [[round(s.start, 2), s.text] for s in hs]},
                         open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
