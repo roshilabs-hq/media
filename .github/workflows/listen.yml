@@ -1,6 +1,8 @@
 # משימה 153 (3.11.2026): בסביבת ההפקה בענן אין Whisper (pip נתקע, הורדת המודל נקטעת), אז ההקשבה רצה כאן.
 # כל mp4 שנדחף תחת auto/ מתומלל (Whisper medium, עברית), והתמלול נשמר לידו: <קובץ>.heard.json עם ה-SHA של הקובץ.
 # precheck.py קורא את הקובץ הזה במקום להריץ Whisper, ורק אם ה-SHA תואם. ההפקה מושכת את הריפו ומריצה precheck על העותק כאן.
+# 4.11: מאזין שני, ivrit-ai (Whisper שאומן על עברית), נשמר ב-segments_he. precheck פוסל מילה רק אם שניהם שמעו אותה אחרת
+# ("פתוח" נשמע "כתוח" ב-medium בלבד, וידיעה תקינה נעצרה).
 name: listen
 on:
   push:
@@ -34,30 +36,37 @@ jobs:
       - uses: actions/cache@v4
         if: steps.files.outputs.any == '1'
         with:
-          path: ~/.cache/whisper
-          key: whisper-medium-v1
+          path: |
+            ~/.cache/whisper
+            ~/.cache/huggingface
+          key: whisper-medium-ivrit-v2
       - name: התקנה
         if: steps.files.outputs.any == '1'
         run: |
           sudo apt-get -qq update && sudo apt-get -qq install -y ffmpeg
           pip install -q torch --index-url https://download.pytorch.org/whl/cpu
-          pip install -q openai-whisper
+          pip install -q openai-whisper faster-whisper
       - name: תמלול
         if: steps.files.outputs.any == '1'
         run: |
           python3 - <<'PY'
           import hashlib, json, os, whisper
-          m = None
+          from faster_whisper import WhisperModel
+          m = he = None
           for v in open("/tmp/new.txt").read().split():
               if not os.path.exists(v):
                   continue
               out = v + ".heard.json"
               sha = hashlib.sha256(open(v, "rb").read()).hexdigest()
-              if os.path.exists(out) and json.load(open(out, encoding="utf-8")).get("sha256") == sha:
+              old = json.load(open(out, encoding="utf-8")) if os.path.exists(out) else {}
+              if old.get("sha256") == sha and old.get("segments_he"):
                   continue
               m = m or whisper.load_model("medium")
               r = m.transcribe(v, language="he")
-              json.dump({"sha256": sha, "model": "medium", "segments": [[round(s["start"], 2), s["text"]] for s in r["segments"]]},
+              he = he or WhisperModel("ivrit-ai/whisper-large-v3-turbo-ct2", device="cpu", compute_type="int8")
+              hs, _ = he.transcribe(v, language="he")
+              json.dump({"sha256": sha, "model": "medium", "segments": [[round(s["start"], 2), s["text"]] for s in r["segments"]],
+                         "model_he": "ivrit-ai/whisper-large-v3-turbo-ct2", "segments_he": [[round(s.start, 2), s.text] for s in hs]},
                         open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
               print("ok", out)
           PY
