@@ -1,0 +1,33 @@
+{
+ "title": "basics-01-response-time",
+ "series": "חוזרים לבסיס",
+ "num": "פרק 1",
+ "name": "זמן תגובה",
+ "next": "פרק 2: משימה חוזרת",
+ "scenes": [
+  [
+   "<div class=\"ep\">חוזרים לבסיס · פרק 1</div><h2 class=\"t\"><span class=\"w\" dir=\"ltr\">10:00 <span class=\"hl\">→ 21:00</span></span><br><span class=\"w\">לקוח</span> <span class=\"w\">כתב.</span> <span class=\"w hl\">ענית.</span></h2><img class=\"ic\" src=\"assets/mobile_phone_3d.png\"><div class=\"pill\">הודעה אחת. 11 שעות.</div>",
+   "light"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">ב-11:00</span> <span class=\"w\">הוא</span> <span class=\"w\">כבר</span><br><span class=\"w hl\">סגר</span> <span class=\"w hl\">עם</span> <span class=\"w hl\">אחר.</span></h2><img class=\"ic\" src=\"assets/door_3d.png\"><div class=\"pill\">והדלת נסגרה.</div>",
+   "light"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">מה</span> <span class=\"w\">היית</span> <span class=\"w\">רוצה?</span><br><span class=\"w hl\">תשובה</span> <span class=\"w hl\">מיד.</span></h2><div class=\"bubble\">היי! קיבלנו, חוזרים אליך 🙂<small><span style=\"color:#34b7f1\">✓✓</span> 10:00</small></div><div class=\"pill\">גם באמצע עבודה.</div>",
+   "light"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">אבל</span> <span class=\"w\">אתה</span><br><span class=\"w hl\">באמצע</span> <span class=\"w hl\">עבודה.</span></h2><div class=\"trio\"><div><img src=\"assets/wrench_3d.png\"><b>העבודה</b></div><div><img src=\"assets/ice_3d.png\"><b>הלקוח מתקרר</b></div><div><img src=\"assets/couch_and_lamp_3d.png\"><b>הערב שלך</b></div></div><div class=\"pill\">שלושה מחירים.</div>",
+   "light"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">לזה</span> <span class=\"w\">קוראים</span><br><span class=\"w hl\">זמן</span> <span class=\"w hl\">תגובה.</span></h2><img class=\"ic\" src=\"assets/stopwatch_3d.png\"><div class=\"pill\">מהפנייה עד התשובה.</div>",
+   "dark"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">את</span> <span class=\"w\">התשובה</span> <span class=\"w\">הראשונה</span><br><span class=\"w hl\">לא</span> <span class=\"w hl\">חייבים</span> <span class=\"w hl\">לכתוב.</span></h2><img class=\"ic\" src=\"assets/gear_3d.png\"><div class=\"pill\">היא יוצאת לבד.</div>",
+   "light"
+  ]
+ ]
+}
