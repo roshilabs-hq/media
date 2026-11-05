@@ -1,0 +1,24 @@
+{
+ "id": "N20261102-3",
+ "opener": {"word": "עורך", "bg": "blue", "block": "yellow"},
+ "keywords": ["בחינם", "FilmCraft", "וידאו", "הסתייגות", "alpha", "כוכבים", "סרטון"],
+ "sentences": [
+  {"text": "עורך וידאו שלם, בחינם.",
+   "scene": {"kind": "hook", "title": "עורך וידאו שלם.", "hand": "בחינם.", "images": ["filmcraft-timeline.png"], "color": "purple"}},
+  {"text": "קוראים לו FilmCraft, והוא קוד פתוח.",
+   "scene": {"kind": "big", "chip": "קוד פתוח", "title": "FilmCraft.", "hand": "קוד פתוח.", "color": "green"}},
+  {"text": "יש בו ציר זמן, תיקוני צבע, מעברים וכתוביות.",
+   "scene": {"kind": "window", "chip": "FilmCraft", "title": "ציר זמן וצבע.", "hand": "מעברים וכתוביות.", "image": "filmcraft-color.png", "bar": "FilmCraft", "real": "מסך אמיתי · מתוך GitHub · 5.11", "color": "blue", "ghost": "ציר זמן", "width": 940, "top": 600}},
+  {"text": "ובסוף, הסרטון מוכן.",
+   "scene": {"kind": "window", "chip": "ייצוא", "title": "ומייצאים.", "hand": "סרטון מוכן.", "image": "filmcraft-export.png", "bar": "FilmCraft", "real": "מסך אמיתי · מתוך GitHub · 5.11", "color": "orange", "ghost": "ייצוא", "width": 940, "top": 600}},
+  {"text": "עובד במק, בווינדוס, ואפשר גם בלי להתקין.",
+   "scene": {"kind": "big", "chip": "איפה זה עובד?", "title": "איפה זה עובד?", "hand": "מק · ווינדוס · דפדפן", "color": "sky"}},
+  {"text": "הסתייגות: זו גרסת alpha. על קבצים גדולים הוא איטי, וצילומי טלפון נבדקו פחות.",
+   "scene": {"kind": "big", "chip": "הסתייגות", "title": "הסתייגות.", "hand": "גרסת alpha. איטי על קבצים גדולים.", "color": "red"}},
+  {"text": "יותר מ-17 אלף כוכבים ב-GitHub.",
+   "scene": {"kind": "big", "kick": "נבדק 1.11", "title": "17 אלף כוכבים.", "hand": "ב-GitHub", "color": "yellow"}},
+  {"text": "ואם משהו בעסק שלכם חוזר כל שבוע, אפשר לבנות לו כלי. תכתבו \"סרטון\" בתגובות.",
+   "scene": {"kind": "brand", "hand": "תכתבו \"סרטון\" בתגובות", "follow": true, "color": "blue"}}
+ ],
+ "cover": {"color": "purple", "line": "עורך וידאו שלם.", "hand": "בחינם.", "image": "filmcraft-timeline.png"}
+}
