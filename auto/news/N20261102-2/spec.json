@@ -1,0 +1,116 @@
+{
+ "id": "N20261102-2",
+ "opener": {
+  "word": "עורך",
+  "bg": "blue",
+  "block": "yellow"
+ },
+ "keywords": [
+  "בחינם",
+  "PhotoCraft",
+  "שכבות",
+  "הסתייגות",
+  "כוכבים",
+  "תמונה"
+ ],
+ "sentences": [
+  {
+   "text": "צריך לתקן תמונה ואין לכם פוטושופ?",
+   "scene": {
+    "kind": "hook",
+    "title": "עורך תמונות.",
+    "hand": "בחינם.",
+    "images": [
+     "photocraft-demo.jpg"
+    ],
+    "color": "orange"
+   }
+  },
+  {
+   "text": "יש עורך תמונות חינמי שנקרא PhotoCraft.",
+   "scene": {
+    "kind": "big",
+    "chip": "קוד פתוח",
+    "title": "PhotoCraft.",
+    "hand": "קוד פתוח.",
+    "color": "blue"
+   }
+  },
+  {
+   "text": "שכבות, מסכות, תיקוני צבע, וגם טקסט על התמונה.",
+   "scene": {
+    "kind": "window",
+    "chip": "PhotoCraft",
+    "title": "שכבות ומסכות.",
+    "hand": "ותיקוני צבע.",
+    "image": "photocraft-adjustments.jpg",
+    "bar": "PhotoCraft",
+    "real": "מסך אמיתי · מתוך GitHub · 5.11",
+    "color": "green",
+    "ghost": "שכבות",
+    "width": 940,
+    "top": 600
+   }
+  },
+  {
+   "text": "פותחים גם קבצי PSD.",
+   "scene": {
+    "kind": "window",
+    "chip": "PSD",
+    "title": "טקסט על התמונה.",
+    "hand": "ופותח קבצי PSD.",
+    "image": "photocraft-type.jpg",
+    "bar": "PhotoCraft",
+    "real": "מסך אמיתי · מתוך GitHub · 5.11",
+    "color": "purple",
+    "ghost": "PSD",
+    "width": 940,
+    "top": 600
+   }
+  },
+  {
+   "text": "עובד במק, בווינדוס, וגם בדפדפן.",
+   "scene": {
+    "kind": "big",
+    "chip": "איפה זה עובד?",
+    "title": "איפה זה עובד?",
+    "hand": "מק · ווינדוס · דפדפן",
+    "color": "sky"
+   }
+  },
+  {
+   "text": "הסתייגות גדולה: גרסה מוקדמת מאוד, ולפי המפתחים עוד לא לעבודה מקצועית יומיומית.",
+   "scene": {
+    "kind": "big",
+    "chip": "הסתייגות",
+    "title": "הסתייגות גדולה.",
+    "hand": "גרסה מוקדמת. עוד לא לעבודה מקצועית.",
+    "color": "red"
+   }
+  },
+  {
+   "text": "ועדיין, יותר מ-76 אלף כוכבים ב-GitHub.",
+   "scene": {
+    "kind": "big",
+    "kick": "נבדק 5.11",
+    "title": "יותר מ-76 אלף כוכבים.",
+    "hand": "ב-GitHub",
+    "color": "yellow"
+   }
+  },
+  {
+   "text": "ואם אפשר לבנות עורך שלם, אפשר לבנות כלי קטן לעסק שלכם. תכתבו \"תמונה\" בתגובות.",
+   "scene": {
+    "kind": "brand",
+    "hand": "תכתבו \"תמונה\" בתגובות",
+    "color": "blue"
+   }
+  }
+ ],
+ "cover": {
+  "color": "orange",
+  "line": "עורך תמונות.",
+  "hand": "בחינם.",
+  "image": "photocraft-demo.jpg"
+ }
+}
