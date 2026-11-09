@@ -1,0 +1,33 @@
+{
+ "title": "basics-02-repeat-task",
+ "series": "חוזרים לבסיס",
+ "num": "פרק 2",
+ "name": "משימה חוזרת",
+ "next": "פרק 3: פרטים חסרים",
+ "scenes": [
+  [
+   "<div class=\"ep\">חוזרים לבסיס · פרק 2</div><h2 class=\"t\"><span class=\"w\">אותן</span> <span class=\"w\">שאלות.</span><br><span class=\"w hl\">כל</span> <span class=\"w hl\">יום.</span></h2><div style=\"margin-top:auto;display:flex;flex-direction:column;gap:26px;align-items:center\"><div class=\"bubble\" style=\"margin-top:0;font-size:58px;padding:26px 48px\">מה המחיר?</div><div class=\"bubble\" style=\"margin-top:0;font-size:58px;padding:26px 48px\">איפה אתם?</div><div class=\"bubble\" style=\"margin-top:0;font-size:58px;padding:26px 48px\">יש תור מחר?</div></div><div class=\"pill\">ענית גם אתמול.</div>",
+   "light"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">ומחר?</span><br><span class=\"w hl\">שוב.</span> <span class=\"w hl\">מילה</span> <span class=\"w hl\">במילה.</span></h2><img class=\"ic\" src=\"assets/spiral_calendar_3d.png\"><div class=\"pill\">אותה תשובה, מהתחלה.</div>",
+   "light"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">מה</span> <span class=\"w\">היית</span> <span class=\"w\">רוצה?</span><br><span class=\"w hl\">שזה</span> <span class=\"w hl\">ייצא</span> <span class=\"w hl\">בלי</span> <span class=\"w hl\">להקליד.</span></h2><div class=\"bubble\">היי! הנה המחירון, הכתובת והתורים הפנויים 🙂<small><span style=\"color:#34b7f1\">✓✓</span> 10:02</small></div><div class=\"pill\">גם באמצע עבודה.</div>",
+   "light"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">אבל</span> <span class=\"w\">אתה</span><br><span class=\"w hl\">מקליד</span> <span class=\"w hl\">שוב.</span></h2><div class=\"trio\"><div><img src=\"assets/wrench_3d.png\"><b>העבודה</b></div><div><img src=\"assets/hourglass_not_done_3d.png\"><b>הלקוח מחכה</b></div><div><img src=\"assets/couch_and_lamp_3d.png\"><b>הערב שלך</b></div></div><div class=\"pill\">שלושה מחירים.</div>",
+   "light"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">לזה</span> <span class=\"w\">קוראים</span><br><span class=\"w hl\">משימה</span> <span class=\"w hl\">חוזרת.</span></h2><img class=\"ic\" src=\"assets/repeat_button_3d.png\"><div class=\"pill\">שוב ושוב, באותה צורה.</div>",
+   "dark"
+  ],
+  [
+   "<h2 class=\"t\"><span class=\"w\">ומה</span> <span class=\"w\">שחוזר</span><br><span class=\"w hl\">יכול</span> <span class=\"w hl\">לקרות</span> <span class=\"w hl\">לבד.</span></h2><img class=\"ic\" src=\"assets/gear_3d.png\"><div class=\"pill\">הקו החמישי.</div>",
+   "light"
+  ]
+ ]
+}
