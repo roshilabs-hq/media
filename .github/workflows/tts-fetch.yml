@@ -24,7 +24,8 @@ jobs:
               out = os.path.join(os.path.dirname(f), "voice"); os.makedirs(out, exist_ok=True)
               for name, jid in json.load(open(f)).items():
                   dst = os.path.join(out, f"{name}.wav")
-                  if os.path.exists(dst):
+                  idf = dst + ".id"  # 11.11: מספר ההזמנה של הקובץ. הקלטה חדשה (מספר אחר) מורידה מחדש; בלי זה N20261108-1 v4 נתקעה על קבצי 9.11
+                  if os.path.exists(dst) and (not os.path.exists(idf) or open(idf).read().strip() == str(int(jid))):
                       continue
                   for _ in range(40):  # עד 10 דקות להקלטה שעוד לא מוכנה
                       try:
@@ -36,6 +37,7 @@ jobs:
                           time.sleep(15)
                   else:
                       raise SystemExit(f"{f} {name}: not ready after 10 minutes")
+                  open(idf, "w").write(str(int(jid)))
                   print("ok", dst)
           PY
           git config user.name "tts-fetch"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
