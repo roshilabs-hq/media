@@ -1,0 +1,29 @@
+{
+ "sha256": "474a551f1c6b9d261b00c7feaf28adb391c4d7885e5f7ef59d2cdd45f7984683",
+ "model": "medium",
+ "segments": [
+  [
+   0.0,
+   " כשתראו אתjuvvv k crochet windows"
+  ],
+  [
+   6.52,
+   " תמורה"
+  ],
+  [
+   13.04,
+   " מוזיק ordered"
+  ],
+  [
+   20.82,
+   " מה שתמצא 작업 confession"
+  ]
+ ],
+ "model_he": "ivrit-ai/whisper-large-v3-turbo-ct2",
+ "segments_he": [
+  [
+   0.0,
+   " ‫‫‫‫"
+  ]
+ ]
+}
