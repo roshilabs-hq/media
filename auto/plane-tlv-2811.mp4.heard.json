@@ -1,0 +1,17 @@
+{
+ "sha256": "595c30e0097e8396bd5dbc0ea1b7514a4418ddf0635ea3992c39b5c0cb2548c4",
+ "model": "medium",
+ "segments": [
+  [
+   0.0,
+   " Bastijan"
+  ]
+ ],
+ "model_he": "ivrit-ai/whisper-large-v3-turbo-ct2",
+ "segments_he": [
+  [
+   0.0,
+   " אהההההההההה"
+  ]
+ ]
+}
