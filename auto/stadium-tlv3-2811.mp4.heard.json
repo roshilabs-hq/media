@@ -1,0 +1,17 @@
+{
+ "sha256": "5f331cb45a762a396b83146f402b7aa9682993b3b794be908d487e44620b9907",
+ "model": "medium",
+ "segments": [
+  [
+   0.0,
+   "andeji"
+  ]
+ ],
+ "model_he": "ivrit-ai/whisper-large-v3-turbo-ct2",
+ "segments_he": [
+  [
+   0.0,
+   " אההההההההההה"
+  ]
+ ]
+}
