@@ -1,0 +1,17 @@
+{
+ "sha256": "ed5a223e0ccda3d5237c48edf005e8425cb02e328c19a134a244e97fe81b8d94",
+ "model": "medium",
+ "segments": [
+  [
+   0.0,
+   " כל遊戲 Events"
+  ]
+ ],
+ "model_he": "ivrit-ai/whisper-large-v3-turbo-ct2",
+ "segments_he": [
+  [
+   0.0,
+   " אהההההההההה"
+  ]
+ ]
+}
