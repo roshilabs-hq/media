@@ -1,0 +1,17 @@
+{
+ "sha256": "99231f0646fd5c83ea5bc92564b1460e6119877a14d760afc369ab01a77fcc47",
+ "model": "medium",
+ "segments": [
+  [
+   0.0,
+   "CLAP CLAP CLAP CLAP Sitting Cuts"
+  ]
+ ],
+ "model_he": "ivrit-ai/whisper-large-v3-turbo-ct2",
+ "segments_he": [
+  [
+   0.0,
+   " אההההההההההה"
+  ]
+ ]
+}
