@@ -1,0 +1,12 @@
+{
+ "sha256": "0e6ccbe0d0043ecca58a9d52118f4c71a28bb017309c7a901055ebd4539a89a9",
+ "model": "medium",
+ "segments": [],
+ "model_he": "ivrit-ai/whisper-large-v3-turbo-ct2",
+ "segments_he": [
+  [
+   0.0,
+   " אההההההההההההה"
+  ]
+ ]
+}
